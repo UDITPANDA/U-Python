@@ -61,6 +61,18 @@ def huffman_encoding(sentence):
     
     return codes, freq_map
 
-# Example usage
-sentence = input("Enter a sentence: ")
-codes, freq_map = huffman_encoding(sentence)
+# Main program runner with loop
+def main():
+    while True:
+        sentence = input("Enter a sentence (or 'NaN' to exit): ")
+        
+        if sentence == "NaN":
+            print("Exiting program. Goodbye!")
+            break
+        
+        codes, freq_map = huffman_encoding(sentence)
+        print()  # Add blank line for better readability between iterations
+
+# Run the program
+if __name__ == "__main__":
+    main()
